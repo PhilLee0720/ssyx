@@ -1,0 +1,37 @@
+server:
+  port: 8206
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-enums-package: com.lee.ssxy.enums
+
+#369c2fa267f65af1649f53f50f8d9577
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/shequ-user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 39.106.59.238
+    port: 6379
+    database: 0
+    timeout: 180000000
+    password:
+    lettuce:
+      pool:
+        max-active: 20 #最大连接数
+        max-wait: -1    #最大阻塞等待时间(负数表示没限制)
+        max-idle: 5    #最大空闲
+        min-idle: 0     #最小空闲
+wx:
+  open:
+    # 小程序微信公众平台appId
+    app_id: wx9616e442574745a5
+    # 小程序微信公众平台api秘钥
+    app_secret: 369c2fa267f65af1649f53f50f8d9577
